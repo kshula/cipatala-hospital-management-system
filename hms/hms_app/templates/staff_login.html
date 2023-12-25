@@ -1,0 +1,34 @@
+<!-- staff_login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Staff Login</title>
+    <!-- Add your stylesheets and other meta tags here -->
+</head>
+<body>
+    <header>
+        <h1>HOSPITAL STAFF LOGIN</h1>
+    </header>
+
+    <section>
+        <form action="{% url 'staff_dashboard' %}" method="post">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p><a href="{% url 'forgot_password' %}">Forgot Password?</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Hospital Management System</p>
+    </footer>
+</body>
+</html>

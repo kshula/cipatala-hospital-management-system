@@ -1,0 +1,73 @@
+<!-- reception_dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptionist Dashboard</title>
+    <!-- Add your stylesheets and other meta tags here -->
+</head>
+<body>
+    <header>
+        <h1>RECEPTIONIST DASHBOARD</h1>
+    </header>
+
+    <section>
+        <div class="welcome-message">
+            <p>Welcome, Receptionist [Receptionist Name]!</p>
+        </div>
+
+        <div class="upcoming-appointments">
+            <h2>Upcoming Appointments</h2>
+            <!-- Placeholder content for upcoming appointments -->
+            <ul>
+                <li>Patient 1 - 10:00 AM</li>
+                <li>Patient 2 - 11:30 AM</li>
+                <li>Patient 3 - 2:00 PM</li>
+            </ul>
+        </div>
+
+        <div class="patient-registration">
+            <h2>Patient Registration</h2>
+            <form method="post" action="{% url 'reception_dashboard' %}">
+                {% csrf_token %}
+                {{ patient_form.as_p }}
+                <button type="submit">Register Patient</button>
+            </form>
+        </div>
+
+        <div class="test-results">
+            <h2>Test Results</h2>
+            <!-- Placeholder content for displaying test results -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient</th>
+                        <th>Test Type</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Patient 1</td>
+                        <td>Blood Test</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td>Patient 2</td>
+                        <td>X-Ray</td>
+                        <td>Abnormal</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Add more sections based on your requirements -->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Hospital Management System</p>
+    </footer>
+</body>
+</html>

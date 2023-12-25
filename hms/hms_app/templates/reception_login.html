@@ -1,0 +1,32 @@
+<!-- reception_login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptionist Login</title>
+    <!-- Add your stylesheets and other meta tags here -->
+</head>
+<body>
+    <header>
+        <h1>RECEPTIONIST LOGIN</h1>
+    </header>
+
+    <section>
+        <form action="{% url 'reception_login' %}" method="post">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Hospital Management System</p>
+    </footer>
+</body>
+</html>
