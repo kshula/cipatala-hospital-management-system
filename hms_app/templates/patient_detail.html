@@ -1,0 +1,33 @@
+<!-- patient_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details</title>
+    <!-- Add your stylesheets and other meta tags here -->
+</head>
+<body>
+    <header>
+        <h1>Patient Details</h1>
+    </header>
+
+    <section>
+        <p>Name: {{ patient.first_name }} {{ patient.last_name }}</p>
+        <p>Date of Birth: {{ patient.date_of_birth }}</p>      
+        <p>Insurance Provider: {{ patient.insurance_provider }}</p>
+        <p>Payment Method: {{ patient.payment_method }}</p>
+        <p>Preferred Language: {{ patient.preferred_language }}</p>
+        <p>Religious Preferences: {{ patient.religious_preferences }}</p>
+        <p>Reason for visit: {{ patient.reason_for_visit }}</p>
+        <p>Refering Physician: {{ patient.referring_physician }}</p>
+        
+        
+        <!-- Add other patient details as needed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Hospital Management System</p>
+    </footer>
+</body>
+</html>

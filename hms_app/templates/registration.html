@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Register</title>
+    <!-- Add your stylesheets and other meta tags here -->
+</head>
+<body>
+    <header>
+        <h1>Hospital Management System</h1>
+        <!-- Add navigation links or other header content here -->
+    </header>
+
+    <section>
+        <h2>Login</h2>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <!-- Add login form fields here -->
+            <button type="submit">Login</button>
+        </form>
+
+        <h2>Register</h2>
+        <form action="{% url 'register_patient' %}" method="post">
+            {% csrf_token %}
+            <!-- Add registration form fields here -->
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Hospital Management System</p>
+        <!-- Add footer content or links here -->
+    </footer>
+</body>
+</html>
